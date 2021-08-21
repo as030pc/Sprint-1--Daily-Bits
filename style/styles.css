@@ -1,0 +1,50 @@
+#body {
+    background-color:#6B47DC;
+}
+#card {
+    
+    position: relative;
+    width: 360px;
+    height: 640px;
+    background: #16161A;
+    color:white;
+    
+
+}
+
+#card img{
+    position: absolute;
+width: 80px;
+height: 80px;
+left: calc(50% - 80px/2);
+top: calc(50% - 80px/2 - 248px);
+
+}
+
+#card h5 {
+    position: static;
+    width: 208px;
+    height: 39px;
+    left: calc(50% - 208px/2);
+    top: calc(50% - 39px/2 - 152px);
+    
+    font-family: Inter;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 39px;
+    /* identical to box height */
+    
+    
+    /* White */
+    
+    color: #FFFFFE;
+    
+    
+    /* Inside Auto Layout */
+    
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin: 32px 0px;
+}
