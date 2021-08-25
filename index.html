@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ess">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,13 +9,231 @@
     <title> Daily Bits</title>
 </head>
 <body id = "body">
-    <div id = "card">
-        
-            <img src="./images/Color=Purple, Container=Yes.png" alt="">
-          <h5> Iniciar Sesión</h5>
-          
+
+    <main> 
+    <!-- Pagina de inicio -->
+    <section class="pagina-inicio">
+        <div class="inicio-logo">
+            <img src="/images/logo-dailyBits.png" alt="">
         </div>
-      </div>
+    </section>
+
+
+    <!-- Pagina Inicio Sesion -->
+    <section class="inicio-sesion">
+        <div class="logo-inicio-sesion">
+            <img src="/images/Color=Purple, Container=Yes.png" alt="">
+        </div>
+        <div class="titulo-iniciar-sesion">
+            <p>Iniciar sesión</p>
+        </div>
+        <div class="boton-google">
+                <img src="./images/icono-google.png" alt="">
+                <p>Inicio Sesion Google</p>
+        </div>
+        <div class="div-correo-electronico">
+                <p>Correo Electronico</p>     
+        </div>
+        <div>
+            <input class="div-input-correo" required type="email" placeholder="  Ingrese correo electronico">
+        </div>
+        <div class="olvido-contrasena">
+            <a href = "">Se te olvido la contraseña</a>
+        </div>
+        <div class="sin-cuenta">
+            <p>Aun no tienes cuenta? <a href=""> Inscribirse </a> </p>
+        </div>
+    </section>
+    <!-- Pagina Menu de lenguajes -->
+    <section class="menu-practica" id="seccion1">
+        <div class="menu-enunciado">
+            <h1>
+                Practica tus conocimientos en la categoría que prefieras 
+            </h1>
+        </div>
+
+        <div class="menu-logos-lenguajes">
+            <div class="opcion-html">
+                <img src="images/logo-html.png" alt="">
+            </div>
+            <div class="opcion-css">
+                <img src="images/logo-css.png" alt="">
+            </div>
+            <div class="opcion-js">
+                <img src="images/logo-js.png" alt="">
+            </div>
+        </div>
+
+        <div class="menu-navegacion">
+            <div class="menu-home" id="btnHome">
+                <img src="images/icono-home.png" alt="">
+            </div>
+            <div class="menu-estadisticas">
+                <img src="images/icono-estadisticas.png" alt="">
+            </div>
+            <div class="menu-perfil">
+                <img src="images/icono-perfil.png" alt="">
+            </div>
+        </div>
+    </section>
+    <!-- Modulo - Estadisticas -->
+    <section class="modulo-estadisticas">
+        <div class="titulo-estadisticas">
+            <h1>Estadisticas </h1>
+        </div>
+        <div class="barra-tiempo">
+            <h5> Tiempo</h5>
+        </div>
+        <div class="info-progreso">
+            <div class="tiempo-progreso">
+                <img src="./images/icono-reloj.png" alt="">
+                <p>Tiempo de estudio (horas) </p>
+                <span class="tiempo-estudio">5</span>
+            </div>
+            <div class="resp-contest">
+                <img src="./images/icono-nube.png" alt="">
+                <p> Respuestas contestadas </p>
+                <span class="respuestas-totales">5</span>
+            </div>
+            <div class="resp-correct">
+                <img src="./images/icono-nube.png" alt="">
+                <p> Respuestas correctas </p>
+                <span class="respuestas-correctas" style="color:#2CB67D; margin:5px">5</span>
+            </div>
+            <div class="resp-incorrect">
+                <img src="./images/icono-nube.png" alt="">
+                <p> Respuestas incorrectas </p>
+                <span class="respuestas-incorrectas" style="color:#EF4565">5</span>
+            </div>
+            
+        </div>
+            <div class="menu-navegacion">
+                <div class="menu-home" id="btnHome">
+                    <img src="images/icono-home.png" alt="">
+                </div>
+                <div class="menu-estadisticas">
+                    <img src="images/icono-estadisticas.png" alt="">
+                </div>
+                <div class="menu-perfil">
+                    <img src="images/icono-perfil.png" alt="">
+                </div>
+            </div>
+    </section>
+
+     <!-- Modulo - Perfil -->
+     <section class="modulo-perfil">
+         <div class="modulo-titulo">
+             <p> Perfil</p>
+
+         </div>
+         <div class="info-perfil">
+             <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+             <h1> Nombre</h1>
+             <p>Correo</p>
+         </div>
+         <div class="cerrar-sesion">
+             Cerrar sesion
+         </div>
+         <div class="menu-navegacion">
+            <div class="menu-home" id="btnHome">
+                <img src="images/icono-home.png" alt="">
+            </div>
+            <div class="menu-estadisticas">
+                <img src="images/icono-estadisticas.png" alt="">
+            </div>
+            <div class="menu-perfil">
+                <img src="images/icono-perfil.png" alt="">
+            </div>
+        </div>
+
+     </section>
+
+     <!-- Pregunta Tipo-Seleccion Multiple -->
+     <section class="PreguntaTipo1">
+         <div class="barra-progreso">
+            <progress id="file" max="100" value="70"> 70% </progress>
+            <img src="./images/logo-corazon.png" alt="">
+            <span> 4</span>
+         </div>
+         <div class="pregunta-select">
+             <img src="./images/avatar1.png" alt="">
+             <p>Pregunta</p>
+         </div>
+         <div class="respuestas-select">
+             <div class="respuesta1-select">a</div>
+             <div class="respuesta-2-select">b</div>
+             <div class="respuesta3-select">c</div>
+         </div>
+         <div class="comprobar-respuesta">
+             <p>COMPROBAR</p>
+         </div>
+
+     </section>
+
+     <!-- Pregunta Tipo-Orden -->
+     <section class="PreguntaTipoOrden">
+        <div class="barra-progreso">
+           <progress id="file" max="100" value="70"> 70% </progress>
+           <img src="./images/logo-corazon.png" alt="">
+           <span> 4</span>
+        </div>
+        <div class="pregunta-orden">
+            <p>Pregunta</p>
+        </div>
+        <div class="respuesta-orden">
+            <div class="contenedor-respuestas">
+
+            </div>
+            <div class = "barra-div"></div>
+            <div class="contenedor-respuestas">
+
+            </div>
+            <div class = "barra-div"></div>
+
+        </div>
+
+        <div class="respuesta-desorden">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="comprobar-respuesta">
+            <p>COMPROBAR</p>
+        </div>
+
+    </section>
+     <!-- Pregunta Tipo-Img -->
+     <section class="PreguntaTipoImagen">
+        <section class="PreguntaTipo1">
+            <div class="barra-progreso">
+               <progress id="file" max="100" value="70"> 70% </progress>
+               <img src="./images/logo-corazon.png" alt="">
+               <span> 4</span>
+            </div>
+            <div class="pregunta-select">
+
+                <p>Pregunta</p>
+            </div>
+            <div class="respuestas-img">
+                <div class="respuesta1-img">a</div>
+                <div class="respuesta-2-img">b</div>
+                <div class="respuesta3-img">c</div>
+            </div>
+            <div class="comprobar-respuesta">
+                <p>COMPROBAR</p>
+            </div>
+   
+        </section>
+   
+
+     </section>
+
+
+        
+    </main>
+    
     <script src="./scripts/script.js"></script>
 </body>
 </html>
