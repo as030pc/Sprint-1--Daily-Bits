@@ -18,7 +18,6 @@
         </div>
     </section>
 
-
     <!-- Pagina Inicio Sesion -->
     <section class="inicio-sesion">
         <div class="logo-inicio-sesion">
@@ -31,19 +30,53 @@
                 <img src="./images/icono-google.png" alt="">
                 <p>Inicio Sesion Google</p>
         </div>
-        <div class="div-correo-electronico">
-                <p>Correo Electronico</p>     
+        <div>
+            <p>Correo Electronico</p>  
+            <input class="div-input-correo"  id = "correoLogin" required type="email" placeholder="  Ingrese correo electronico">
         </div>
         <div>
-            <input class="div-input-correo" required type="email" placeholder="  Ingrese correo electronico">
+            <p>Contraseña</p> 
+            <input class="div-input-correo" id = "contraLogin" required type="password" placeholder="  Ingrese una contraseña">
+        </div>
+        <div class="boton-ingresar">
+            <p>Ingresar</p>
         </div>
         <div class="olvido-contrasena">
             <a href = "">Se te olvido la contraseña</a>
         </div>
         <div class="sin-cuenta">
-            <p>Aun no tienes cuenta? <a href=""> Inscribirse </a> </p>
+            <p>Aun no tienes cuenta? <a class= "inscribirse" > Inscribirse </a> </p>
         </div>
     </section>
+    <!-- Pagina Registro -->
+    <section class="sesion-registro">
+        <div class="logo-inicio-sesion">
+            <img src="/images/Color=Purple, Container=Yes.png" alt="">
+        </div>
+        <div class="titulo-registro">
+            <p>Registro de Usuario</p>
+        </div>
+
+        <div>
+            <label for="">Nombre</label>
+            <input class="div-input-correo" id = "nombreRegistro" required type="text" placeholder="ingrese su nombre">
+        </div>
+        <div>
+            <label for="">Correo Electronico</label>
+            <input class="div-input-correo" id = "correoRegistro" required type="email" placeholder="  Ingrese correo electronico">
+        </div>
+        <div>
+            <label for="">Contraseña</label>
+            <input class="div-input-correo" id = "contraRegistro" required type="password" placeholder="  Ingrese una contraseña">
+        </div>
+        <div class="boton-registrarse">
+            <p>Registrarse</p>
+    </div>
+
+        
+        
+    </section>
+
     <!-- Pagina Menu de lenguajes -->
     <section class="menu-practica" id="seccion1">
         <div class="menu-enunciado">
@@ -82,18 +115,22 @@
             <h1>Estadisticas </h1>
         </div>
         <div class="barra-tiempo">
-            <h5> Tiempo</h5>
+            <select class="barra-tiempo" name="" id="">
+                <option value="1"> Tiempo</option>
+                <option value="7 dias"> 7 dias</option>
+                <option value="1 mes"> 1 mes </option>
+            </select>
         </div>
         <div class="info-progreso">
             <div class="tiempo-progreso">
                 <img src="./images/icono-reloj.png" alt="">
                 <p>Tiempo de estudio (horas) </p>
-                <span class="tiempo-estudio">5</span>
+                <span class="tiempo-estudio" style="color:#e8f0ed; margin:6px">5</span>
             </div>
             <div class="resp-contest">
                 <img src="./images/icono-nube.png" alt="">
                 <p> Respuestas contestadas </p>
-                <span class="respuestas-totales">5</span>
+                <span class="respuestas-totales" style="color:white; margin:5px">5</span>
             </div>
             <div class="resp-correct">
                 <img src="./images/icono-nube.png" alt="">
@@ -127,9 +164,9 @@
 
          </div>
          <div class="info-perfil">
-             <img src="https://www.w3schools.com/howto/img_avatar.png" alt="">
-             <h1> Nombre</h1>
-             <p>Correo</p>
+             <img class = "imagen-usuario" src="https://www.w3schools.com/howto/img_avatar.png" alt="">
+             <h1 class = "nombre-usuario"> Nombre</h1>
+             <p class = "correo-usuario">Correo</p>
          </div>
          <div class="cerrar-sesion">
              Cerrar sesion
@@ -151,20 +188,20 @@
      <!-- Pregunta Tipo-Seleccion Multiple -->
      <section class="PreguntaTipo1">
          <div class="barra-progreso">
-            <progress id="file" max="100" value="70"> 70% </progress>
+            <progress class ="barra-progreso1" id="file" max="100" value="70"> 70% </progress>
             <img src="./images/logo-corazon.png" alt="">
-            <span> 4</span>
+            <span class ="numero-vidas"> 4</span>
          </div>
          <div class="pregunta-select">
              <img src="./images/avatar1.png" alt="">
-             <p>Pregunta</p>
+             <p class = "pregunta-seleccion">Pregunta</p>
          </div>
          <div class="respuestas-select">
              <div class="respuesta1-select">a</div>
              <div class="respuesta-2-select">b</div>
              <div class="respuesta3-select">c</div>
          </div>
-         <div class="comprobar-respuesta">
+         <div class="comprobar-respuesta-seleccion">
              <p>COMPROBAR</p>
          </div>
 
@@ -173,12 +210,12 @@
      <!-- Pregunta Tipo-Orden -->
      <section class="PreguntaTipoOrden">
         <div class="barra-progreso">
-           <progress id="file" max="100" value="70"> 70% </progress>
+           <progress class ="barra-progreso1" id="file" max="100" value="70"> 70% </progress>
            <img src="./images/logo-corazon.png" alt="">
-           <span> 4</span>
+           <span class ="numero-vidas"> 4</span>
         </div>
         <div class="pregunta-orden">
-            <p>Pregunta</p>
+            <p class="pregunta-ordenamiento">Pregunta</p>
         </div>
         <div class="respuesta-orden">
             <div class="contenedor-respuestas">
@@ -193,24 +230,22 @@
         </div>
 
         <div class="respuesta-desorden">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <button class="respuesta-desorden1">a</button>
+            <button class="respuesta-desorden2">b</button>
+            <button class="respuesta-desorden3">c</button>
+            <button class="respuesta-desorden4">s</button>
         </div>
-        <div class="comprobar-respuesta">
+        <div class="comprobar-respuesta-orden">
             <p>COMPROBAR</p>
         </div>
 
     </section>
      <!-- Pregunta Tipo-Img -->
      <section class="PreguntaTipoImagen">
-        <section class="PreguntaTipo1">
             <div class="barra-progreso">
-               <progress id="file" max="100" value="70"> 70% </progress>
+               <progress class ="barra-progreso1" id="file" max="100" value="70"> 70% </progress>
                <img src="./images/logo-corazon.png" alt="">
-               <span> 4</span>
+               <span class ="numero-vidas"> 4</span>
             </div>
             <div class="pregunta-select">
 
@@ -220,14 +255,11 @@
                 <div class="respuesta1-img">a</div>
                 <div class="respuesta-2-img">b</div>
                 <div class="respuesta3-img">c</div>
+                <div class="respuesta4-img">c</div>
             </div>
-            <div class="comprobar-respuesta">
+            <div class="comprobar-respuesta-imagen">
                 <p>COMPROBAR</p>
             </div>
-   
-        </section>
-   
-
      </section>
 
 

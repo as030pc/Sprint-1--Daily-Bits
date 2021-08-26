@@ -1,0 +1,10 @@
+{
+    "usuarios": [
+        {
+            "id": 1,
+            "nombre": "Andres Palma",
+            "correo": "andres.palma@udea.edu.co",
+            "contrasenia": "123456"
+          }
+    ]
+}

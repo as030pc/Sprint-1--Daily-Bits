@@ -1,0 +1,16 @@
+{
+    "preguntas": [
+        {
+            "tipo-pregunta":"select",
+            "pregunta": "Que tipo de preguta es",
+            "respuestas": ["a", "b", "c"],
+            "respuesta-correcta": "a"
+          },
+          {
+
+          },
+          {
+
+          }
+    ]
+}
