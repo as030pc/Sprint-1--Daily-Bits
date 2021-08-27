@@ -18,7 +18,9 @@ let btnIngresar = document.querySelector('.boton-ingresar')
 let btnHome = document.querySelector('.menu-home')
 let btnEstadisticas = document.querySelector('.menu-estadisticas')
 let btnPerfil = document.querySelector('.menu-perfil')
-
+let btnComprobar1 = document.querySelector('.comprobar-respuesta-seleccion')
+let btnComprobar2 = document.querySelector('.comprobar-respuesta-imagen')
+let btnComprobar3 = document.querySelector('.comprobar-respuesta-orden')
 //Evento de Inicio
 window.addEventListener('DOMContentLoaded', () => {
     seccionRegistro.classList.toggle('remover')
@@ -63,40 +65,79 @@ btnIngresar.addEventListener('click', (e)=>{
 //Barra de navegacion de Estadisticas, perfil y Home
 btnHome.addEventListener('click', ()=>{
     //seccionMenuPractica.classList.toggle('remover')
-    
+    btnEstadisticas.addEventListener('click', ()=>{
+        seccionMenuPractica.classList.toggle('remover')
+        seccionEstadisticas.classList.toggle('remover')
+        seccionMenuPractica.classList.toggle('remover')
+    })
+    btnPerfil.addEventListener('click', ()=>{
+        seccionMenuPractica.classList.toggle('remover')
+        seccionPerfil.classList.toggle('remover')
+        seccionMenuPractica.classList.toggle('remover')
+    })
 })
 
-btnEstadisticas.addEventListener('click', ()=>{
-    seccionMenuPractica.classList.toggle('remover')
-    seccionEstadisticas.classList.toggle('remover')
-    seccionMenuPractica.classList.toggle('remover')
-})
 
-btnPerfil.addEventListener('click', ()=>{
-    seccionMenuPractica.classList.toggle('remover')
-    seccionPerfil.classList.toggle('remover')
-    seccionMenuPractica.classList.toggle('remover')
-})
+
+
 
 
 //Preguntas HTML
 
+
+
 let btnPreguntasHTML = document.querySelector('.opcion-html')
 import {preguntasHTML} from "./modulos/preguntas.js"
-console.log(preguntasHTML[0])
-
+console.log(preguntasHTML)
+console.log(preguntasHTML.length)
+let indiceAleatorio = Math.floor(Math.random()*(preguntasHTML.length))
+console.log(indiceAleatorio)
+console.log(preguntasHTML[indiceAleatorio])
 
 btnPreguntasHTML.addEventListener('click', ()=>{
+
+    //Pregunta tipo select
     seccionMenuPractica.classList.toggle('remover')
     seccionPreguntaTipoSelect.classList.toggle('remover')
     const { pregunta, respuestas} = preguntasHTML[1]
-    console.log(pregunta)
-    console.log(respuestas)
+    // console.log(pregunta)
+    // console.log(respuestas)
     seccionPreguntaTipoSelect.querySelector('.pregunta-seleccion').textContent = pregunta;
-    seccionPreguntaTipoSelect.querySelector('.respuesta1-select').textContent = respuestas[0];
-    seccionPreguntaTipoSelect.querySelector('.respuesta-2-select').textContent = respuestas[1];
-    seccionPreguntaTipoSelect.querySelector('.respuesta3-select').textContent = respuestas[2];
+    for (let i = 0; i<3;i++) {
+        seccionPreguntaTipoSelect.querySelector(`.respuesta${i+1}-select`).textContent = respuestas[i];
+    }
+
+    
+    btnComprobar1.addEventListener('click', ()=> {
+        //Pregunta tipo imagen
+        seccionPreguntaTipoSelect.classList.toggle('remover')
+        seccionPreguntaTipoImagen.classList.toggle('remover')
+        const { pregunta, respuestas} = preguntasHTML[4]
+        seccionPreguntaTipoImagen.querySelector('.pregunta-imagen').textContent = pregunta;
+        for (let i = 0; i<4;i++) {
+            seccionPreguntaTipoImagen.querySelector(`.respuesta${i}`).setAttribute('src',respuestas[i])
+        }
+    })
+
+    btnComprobar2.addEventListener('click', ()=> {
+        //Pregunta tipo imagen
+        seccionPreguntaOrden.classList.toggle('remover')
+        seccionPreguntaTipoImagen.classList.toggle('remover')
+        const { pregunta, respuestas} = preguntasHTML[3]
+        for (let i = 0; i<4;i++) {
+            seccionPreguntaOrden.querySelector(`.respuesta-desorden${i+1}`).setAttribute('src',respuestas[i])
+        }
+    })
+
+
+    
+    
+    
+    
+
 })
+
+
 
 
 

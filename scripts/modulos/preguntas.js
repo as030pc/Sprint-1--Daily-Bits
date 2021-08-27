@@ -33,14 +33,14 @@ export const preguntasHTML = [
     "id":5,
     "tipo-pregunta": "imagen",
     "pregunta": "¿Qué tecnologías pertenece al MEVN Stack?",
-    "respuestas": ["./images/logo-windows.png", "./images/vuelogo.png", "./images/icono-head.png", "./images/opcion4", "./images/logo-angular"],
+    "respuestas": ["./images/logo-windows.png", "./images/vuelogo.png", "./images/opcion4.png", "./images/logo-angular.png"],
     "respuesta-correcta": "a"
   },
   {
     "id":6,
     "tipo-pregunta": "imagen",
     "pregunta": "¿Qué tecnologías pertenece al MEVN Stack?",
-    "respuestas": ["./images/logo-windows.png", "./images/vuelogo.png", "./images/icono-head.png", "./images/opcion4", "./images/logo-angular"],
+    "respuestas": ["./images/logo-windows.png", "./images/vuelogo.png", "./images/icono-head.png", "./images/opcion4.png", "./images/logo-angular.png"],
     "respuesta-correcta": "a"
   }
 ]

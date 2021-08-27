@@ -715,26 +715,28 @@
 
 .respuesta-desorden {
     margin-top: 414px;
-    display: flex;
+    display:inline;
     position: absolute;
     width: 360px;
     height: 144px;
 
+
 }
 
-.respuesta-desorden button {
-    padding:8px;
+.respuesta-desorden img {
+    /* 
     border-radius: 16px;
     color:var(--color-white);
     background-color: var(--color-black);
     display:flex;
     border: 1px solid #94A1B2;
     box-sizing: border-box;
-    box-shadow: 0px 2px 0px #94A1B2;
+    box-shadow: 0px 2px 0px #94A1B2; */
+    padding:8px;
     height:40px;
     width: 156px;
     padding: 8px;
-    margin: 0px 8px;
+    margin:8px;
 }
 
 
@@ -753,7 +755,10 @@
     width: 360px;
     height: 408px;
 }
-.respuestas-img div {
+.respuestas-img img {
+    width:140px;
+    padding:8px;
+    height:200px;
     border: 2px solid #94A1B2;
     box-sizing: border-box;
     box-shadow: 0px 2px 0px #94A1B2;
