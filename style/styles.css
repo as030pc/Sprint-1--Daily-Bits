@@ -588,7 +588,7 @@
 
 .pregunta-select {
     position: absolute;
-    width: 237px;
+    width: 300px;
     height: 120px;
     padding-left:16px;
     margin-top:56px;
@@ -613,7 +613,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 16px 16px 32px;
+    padding: 8px 8px 8px;
     position: absolute;
     width: 360px;
     height: 248px;
@@ -625,8 +625,8 @@
     height: 56px;
     left: 16px;
     top: 16px;
-    margin:16px;
-    padding:16px;
+    margin:8px;
+    padding:8px;
     color:var(--color-white);
     background-color: var(--color-neutral);
     border-radius: 5px;

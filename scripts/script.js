@@ -89,9 +89,13 @@ console.log(preguntasHTML[0])
 btnPreguntasHTML.addEventListener('click', ()=>{
     seccionMenuPractica.classList.toggle('remover')
     seccionPreguntaTipoSelect.classList.toggle('remover')
-    const { pregunta} = preguntasHTML[1]
+    const { pregunta, respuestas} = preguntasHTML[1]
     console.log(pregunta)
+    console.log(respuestas)
     seccionPreguntaTipoSelect.querySelector('.pregunta-seleccion').textContent = pregunta;
+    seccionPreguntaTipoSelect.querySelector('.respuesta1-select').textContent = respuestas[0];
+    seccionPreguntaTipoSelect.querySelector('.respuesta-2-select').textContent = respuestas[1];
+    seccionPreguntaTipoSelect.querySelector('.respuesta3-select').textContent = respuestas[2];
 })
 
 
