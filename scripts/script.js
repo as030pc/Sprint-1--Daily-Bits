@@ -49,18 +49,7 @@ inscribirse.addEventListener('click', (e)=>{
 
 //Evento del boton registrarse
 
-btnRegistrarse.addEventListener('click', ()=>{
-    seccionRegistro.classList.toggle('remover')
-    seccionInicioSesion.classList.toggle('remover')
-})
 
-//Evento del boton Ingresar
-btnIngresar.addEventListener('click', (e)=>{
-    e.stopPropagation();
-    seccionInicioSesion.classList.toggle('remover')
-    seccionMenuPractica.classList.toggle('remover')
-    
-})
 
 
 //Barra de navegacion de Estadisticas, perfil y Home
