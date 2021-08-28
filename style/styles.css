@@ -632,6 +632,8 @@
     border-radius: 5px;
 }
 
+
+
 .comprobar-respuesta-seleccion, .comprobar-respuesta-orden, .comprobar-respuesta-imagen {
     display: flex;
     flex-direction: column;

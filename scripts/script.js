@@ -47,10 +47,6 @@ inscribirse.addEventListener('click', (e)=>{
     seccionRegistro.classList.toggle('remover')
 })
 
-//Evento del boton registrarse
-
-
-
 
 //Barra de navegacion de Estadisticas, perfil y Home
 btnHome.addEventListener('click', ()=>{
@@ -74,8 +70,6 @@ btnHome.addEventListener('click', ()=>{
 
 //Preguntas HTML
 
-
-
 let btnPreguntasHTML = document.querySelector('.opcion-html')
 import {preguntasHTML} from "./modulos/preguntas.js"
 console.log(preguntasHTML)
@@ -97,6 +91,7 @@ btnPreguntasHTML.addEventListener('click', ()=>{
         // console.log(respuestas)
         seccionPreguntaTipoSelect.querySelector('.pregunta-seleccion').textContent = pregunta;
         for (let i = 0; i<3;i++) {
+            seccionPreguntaTipoSelect.querySelector(`.option${i+1}`).setAttribute('value',respuestas[i])
             seccionPreguntaTipoSelect.querySelector(`.respuesta${i+1}-select`).textContent = respuestas[i];
         } 
         
@@ -114,6 +109,7 @@ btnPreguntasHTML.addEventListener('click', ()=>{
         const { pregunta, respuestas} = preguntaActual
         seccionPreguntaTipoImagen.querySelector('.pregunta-imagen').textContent = pregunta;
         for (let i = 0; i<4;i++) {
+            
             seccionPreguntaTipoImagen.querySelector(`.respuesta${i}`).setAttribute('src',respuestas[i])
         }
         
@@ -148,6 +144,7 @@ if (preguntaActual["tipo-pregunta"] == "select") {
     // console.log(respuestas)
     seccionPreguntaTipoSelect.querySelector('.pregunta-seleccion').textContent = pregunta;
     for (let i = 0; i<3;i++) {
+        seccionPreguntaTipoSelect.querySelector(`.option${i+1}`).setAttribute('value',respuestas[i])
         seccionPreguntaTipoSelect.querySelector(`.respuesta${i+1}-select`).textContent = respuestas[i];
     } 
     
@@ -191,6 +188,7 @@ if (preguntaActual["tipo-pregunta"] == "select") {
     // console.log(respuestas)
     seccionPreguntaTipoSelect.querySelector('.pregunta-seleccion').textContent = pregunta;
     for (let i = 0; i<3;i++) {
+        seccionPreguntaTipoSelect.querySelector(`.option${i+1}`).setAttribute('value',respuestas[i])
         seccionPreguntaTipoSelect.querySelector(`.respuesta${i+1}-select`).textContent = respuestas[i];
     } 
     
@@ -234,6 +232,7 @@ if (preguntaActual["tipo-pregunta"] == "select") {
     // console.log(respuestas)
     seccionPreguntaTipoSelect.querySelector('.pregunta-seleccion').textContent = pregunta;
     for (let i = 0; i<3;i++) {
+        seccionPreguntaTipoSelect.querySelector(`.option${i+1}`).setAttribute('value',respuestas[i])
         seccionPreguntaTipoSelect.querySelector(`.respuesta${i+1}-select`).textContent = respuestas[i];
     } 
     
