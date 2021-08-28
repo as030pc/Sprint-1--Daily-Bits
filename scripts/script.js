@@ -90,43 +90,53 @@ let btnPreguntasHTML = document.querySelector('.opcion-html')
 import {preguntasHTML} from "./modulos/preguntas.js"
 console.log(preguntasHTML)
 console.log(preguntasHTML.length)
-let indiceAleatorio = Math.floor(Math.random()*(preguntasHTML.length))
-console.log(indiceAleatorio)
-console.log(preguntasHTML[indiceAleatorio])
+
 
 btnPreguntasHTML.addEventListener('click', ()=>{
-
+    const indiceAleatorio = Math.floor(Math.random()*(preguntasHTML.length))
+    console.log(indiceAleatorio)
+    const preguntaActual = preguntasHTML[indiceAleatorio]
+    // console.log(preguntasHTML[indiceAleatorio])
     //Pregunta tipo select
-    seccionMenuPractica.classList.toggle('remover')
-    seccionPreguntaTipoSelect.classList.toggle('remover')
-    const { pregunta, respuestas} = preguntasHTML[1]
-    // console.log(pregunta)
-    // console.log(respuestas)
-    seccionPreguntaTipoSelect.querySelector('.pregunta-seleccion').textContent = pregunta;
-    for (let i = 0; i<3;i++) {
-        seccionPreguntaTipoSelect.querySelector(`.respuesta${i+1}-select`).textContent = respuestas[i];
-    }
-
-    
-    btnComprobar1.addEventListener('click', ()=> {
-        //Pregunta tipo imagen
+    if (preguntaActual["tipo-pregunta"] == "select") {
+        seccionMenuPractica.classList.toggle('remover')
         seccionPreguntaTipoSelect.classList.toggle('remover')
+        const { pregunta, respuestas} = preguntaActual
+        // console.log(pregunta)
+        // console.log(respuestas)
+        seccionPreguntaTipoSelect.querySelector('.pregunta-seleccion').textContent = pregunta;
+        for (let i = 0; i<3;i++) {
+            seccionPreguntaTipoSelect.querySelector(`.respuesta${i+1}-select`).textContent = respuestas[i];
+        } 
+    } else if (preguntaActual["tipo-pregunta"] == "orden") {
+        seccionPreguntaOrden.classList.toggle('remover')
+        seccionMenuPractica.classList.toggle('remover')
+        const { pregunta, respuestas} = preguntaActual
+        for (let i = 0; i<4;i++) {
+            seccionPreguntaOrden.querySelector(`.respuesta-desorden${i+1}`).setAttribute('src',respuestas[i])
+        }
+    } else {
+        seccionMenuPractica.classList.toggle('remover')
         seccionPreguntaTipoImagen.classList.toggle('remover')
-        const { pregunta, respuestas} = preguntasHTML[4]
+        const { pregunta, respuestas} = preguntaActual
         seccionPreguntaTipoImagen.querySelector('.pregunta-imagen').textContent = pregunta;
         for (let i = 0; i<4;i++) {
             seccionPreguntaTipoImagen.querySelector(`.respuesta${i}`).setAttribute('src',respuestas[i])
         }
+    }
+    
+    
+    
+    
+    
+    btnComprobar1.addEventListener('click', ()=> {
+        //Pregunta tipo imagen
+        
     })
 
     btnComprobar2.addEventListener('click', ()=> {
-        //Pregunta tipo imagen
-        seccionPreguntaOrden.classList.toggle('remover')
-        seccionPreguntaTipoImagen.classList.toggle('remover')
-        const { pregunta, respuestas} = preguntasHTML[3]
-        for (let i = 0; i<4;i++) {
-            seccionPreguntaOrden.querySelector(`.respuesta-desorden${i+1}`).setAttribute('src',respuestas[i])
-        }
+        //Pregunta tipo orden
+        
     })
 
 
