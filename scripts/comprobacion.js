@@ -1,3 +1,4 @@
+
 let btnComprobar1 = document.querySelector('.comprobar-respuesta-seleccion')
 let btnComprobar2 = document.querySelector('.comprobar-respuesta-imagen')
 let btnComprobar3 = document.querySelector('.comprobar-respuesta-orden')
@@ -5,6 +6,7 @@ let seccionPreguntaTipoSelect = document.querySelector('.PreguntaTipoSelect')
 let seccionPreguntaTipoImagen = document.querySelector('.PreguntaTipoImagen')
 let vidas = 4;
 let progreso = 0;
+
 
 
 
@@ -34,28 +36,37 @@ let progreso = 0;
 // })
 
 let respuesta =""
-    let respuesta1 = seccionPreguntaTipoImagen.querySelector('.respuesta0')
+let respuesta1 = seccionPreguntaTipoImagen.querySelector('.respuesta0')
+let respuesta2 = seccionPreguntaTipoImagen.querySelector('.respuesta1')
+let respuesta3 = seccionPreguntaTipoImagen.querySelector('.respuesta2')
+let respuesta4 = seccionPreguntaTipoImagen.querySelector('.respuesta3')
 
     respuesta1.addEventListener('click', e=> {
     respuesta = e.target.id
-    console.log(respuesta)
+    })
+    respuesta2.addEventListener('click', e=> {
+        respuesta = e.target.id
+    })
+    respuesta3.addEventListener('click', e=> {
+        respuesta = e.target.id
+    })
+    respuesta4.addEventListener('click', e=> {
+        respuesta = e.target.id
     })
 
 btnComprobar2.addEventListener('click', ()=> { 
-    
-
-
     if(respuesta =="respuesta0") {
-        alert('correcta')
-        // swal.fire({text:'Correcta',
-        // icon:'success'
-        // })
+        
+        Swal.fire({text:'Correcta',
+        icon:'success'
+        })
 
     } else {
-        alert('incorrecta')
-        // swal.fire({text:'Incorrecto',
-        // icon:'error'
-        // })
+
+        vidas -=1
+        Swal.fire({text:'Incorrecto',
+        icon:'error'
+        })
     }
     respuesta = ""
     
