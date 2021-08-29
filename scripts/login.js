@@ -33,15 +33,29 @@ btnRegistrarse.addEventListener('click', async function registro() {
 let btnIngresar = document.querySelector('.boton-ingresar')
     btnIngresar.addEventListener('click', async (e) => {
     let email = document.getElementById('correoLogin').value;
+    let contrasenia = document.getElementById('contraLogin').value;
     let resp = await fetch('http://localhost:4000/usuarios'); //Para ir consultar en la endpoint y consumirla
     let data = await resp.json();
-    if(data.some(user => user.correo === email)) {
-        alert('Usuario Registrado')
+    if(data.some(user => user.correo === email) ) {
+        if (data.some(user =>user.contrasenia ==contrasenia)) {
+            Swal.fire({text:'Usuario Registrado',
+            icon:'success'
+            
+        })
         e.stopPropagation();
         seccionInicioSesion.classList.toggle('remover')
         seccionMenuPractica.classList.toggle('remover')
-    } else {
-        alert('Usuario No registrado')
+        }
+         else {
+            Swal.fire({text:'Contraseña incorrecta',
+            icon:'error'
+        })
+        
+    }
+ } else {
+        Swal.fire({text:'Intente con otro usuario',
+        icon:'warning'
+        })
     }
     
 })
