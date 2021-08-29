@@ -78,17 +78,12 @@ console.log(preguntasHTML.length)
 
 btnPreguntasHTML.addEventListener('click', ()=>{
     const indiceAleatorio = Math.floor(Math.random()*(preguntasHTML.length))
-    acumuladorPreguntas.push(indiceAleatorio)
-    console.log(indiceAleatorio)
+    // acumuladorPreguntas.push(indiceAleatorio)
     const preguntaActual = preguntasHTML[indiceAleatorio]
-    // console.log(preguntasHTML[indiceAleatorio])
-    //Pregunta tipo select
     if (preguntaActual["tipo-pregunta"] == "select") {
         seccionMenuPractica.classList.toggle('remover')
         seccionPreguntaTipoSelect.classList.toggle('remover')
         const { pregunta, respuestas} = preguntaActual
-        // console.log(pregunta)
-        // console.log(respuestas)
         seccionPreguntaTipoSelect.querySelector('.pregunta-seleccion').textContent = pregunta;
         for (let i = 0; i<3;i++) {
             seccionPreguntaTipoSelect.querySelector(`.option${i+1}`).setAttribute('value',respuestas[i])
@@ -156,7 +151,7 @@ if (preguntaActual["tipo-pregunta"] == "select") {
         seccionPreguntaOrden.querySelector(`.respuesta-desorden${i+1}`).setAttribute('src',respuestas[i])
     }
     
-} else {
+} else if (preguntaActual["tipo-pregunta"] == "imagen") {
     //seccionMenuPractica.classList.toggle('remover')
     seccionPreguntaTipoImagen.classList.toggle('remover')
     const { pregunta, respuestas} = preguntaActual

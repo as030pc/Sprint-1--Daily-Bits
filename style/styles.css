@@ -726,14 +726,7 @@
 }
 
 .respuesta-desorden img {
-    /* 
-    border-radius: 16px;
-    color:var(--color-white);
-    background-color: var(--color-black);
-    display:flex;
-    border: 1px solid #94A1B2;
-    box-sizing: border-box;
-    box-shadow: 0px 2px 0px #94A1B2; */
+    
     padding:8px;
     height:40px;
     width: 156px;
@@ -772,6 +765,96 @@
 .remover{
     display: none;
 }
+
+.buen-trabajo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    position: absolute;
+    width: 360px;
+    height: 122px;
+    left: 0px;
+    bottom: 0px;
+    background: #ACFFCF;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    color: #16161A;
+}
+
+.buen-trabajo button {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 4%;
+    background: #2CB67D;
+    border-radius: 16px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.0125em;
+    color: #FFFFFE;
+    margin-top: 56px;
+    width: 328px;
+    height: 48px;
+    padding-left:123px;
+}
+
+
+.mal-trabajo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    position: absolute;
+    width: 360px;
+    height: 122px;
+    left: 0px;
+    bottom: 0px;
+    background:#F9CFD7;;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.005em;
+    color: #16161A;
+}
+
+.mal-trabajo button {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 4%;
+    background:#EF4565;;
+    border-radius: 16px;
+    font-family: Rubik;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.0125em;
+    color: #FFFFFE;
+    margin-top: 56px;
+    width: 328px;
+    height: 48px;
+    padding-left:123px;
+}
+
 
 
 
