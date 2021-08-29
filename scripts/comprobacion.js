@@ -7,7 +7,47 @@ let seccionPreguntaTipoImagen = document.querySelector('.PreguntaTipoImagen')
 let vidas = 4;
 let progreso = 0;
 
+import {preguntasHTML} from "./modulos/preguntas.js"
 
+const preguntaActual = preguntasHTML[5]
+let respuetaCorrecta = preguntaActual["respuestaCorrecta"]
+
+let respuesta =""
+let respuesta1 = seccionPreguntaTipoImagen.querySelector('.respuesta0')
+let respuesta2 = seccionPreguntaTipoImagen.querySelector('.respuesta1')
+let respuesta3 = seccionPreguntaTipoImagen.querySelector('.respuesta2')
+let respuesta4 = seccionPreguntaTipoImagen.querySelector('.respuesta3')
+
+    respuesta1.addEventListener('click', e=> {
+    respuesta = e.target.id
+    })
+    respuesta2.addEventListener('click', e=> {
+        respuesta = e.target.id
+    })
+    respuesta3.addEventListener('click', e=> {
+        respuesta = e.target.id
+    })
+    respuesta4.addEventListener('click', e=> {
+        respuesta = e.target.id
+    })
+
+btnComprobar2.addEventListener('click', ()=> { 
+    if(respuesta == respuetaCorrecta) {
+        
+        Swal.fire({text:'Correcta',
+        icon:'success'
+        })
+
+    } else {
+
+        vidas -=1
+        Swal.fire({text:'Incorrecto',
+        icon:'error'
+        })
+    }
+    respuesta = ""
+    
+})
 
 
 
@@ -34,43 +74,3 @@ let progreso = 0;
 //         console.log(seccionPreguntaTipoSelect.querySelector('input').value)
 //     }
 // })
-
-let respuesta =""
-let respuesta1 = seccionPreguntaTipoImagen.querySelector('.respuesta0')
-let respuesta2 = seccionPreguntaTipoImagen.querySelector('.respuesta1')
-let respuesta3 = seccionPreguntaTipoImagen.querySelector('.respuesta2')
-let respuesta4 = seccionPreguntaTipoImagen.querySelector('.respuesta3')
-
-    respuesta1.addEventListener('click', e=> {
-    respuesta = e.target.id
-    })
-    respuesta2.addEventListener('click', e=> {
-        respuesta = e.target.id
-    })
-    respuesta3.addEventListener('click', e=> {
-        respuesta = e.target.id
-    })
-    respuesta4.addEventListener('click', e=> {
-        respuesta = e.target.id
-    })
-
-btnComprobar2.addEventListener('click', ()=> { 
-    if(respuesta =="respuesta0") {
-        
-        Swal.fire({text:'Correcta',
-        icon:'success'
-        })
-
-    } else {
-
-        vidas -=1
-        Swal.fire({text:'Incorrecto',
-        icon:'error'
-        })
-    }
-    respuesta = ""
-    
-})
-
-
-

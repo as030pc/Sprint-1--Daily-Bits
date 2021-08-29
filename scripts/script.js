@@ -77,6 +77,8 @@ console.log(preguntasHTML.length)
 let indiceAleatorio = 0
 let acumuladorPreguntas = []
 
+        //comprobacion de preguntas
+        
 
 btnPreguntasHTML.addEventListener('click', ()=>{
     indiceAleatorio = Math.floor(Math.random()*(preguntasHTML.length))
@@ -101,15 +103,17 @@ btnPreguntasHTML.addEventListener('click', ()=>{
             seccionPreguntaOrden.querySelector(`.respuesta-desorden${i+1}`).setAttribute('src',respuestas[i])
         }
         
-    } else {
+    } else {  
         acumuladorPreguntas.push(indiceAleatorio)
-        seccionMenuPractica.classList.toggle('remover')
         seccionPreguntaTipoImagen.classList.toggle('remover')
         const { pregunta, respuestas} = preguntaActual
         seccionPreguntaTipoImagen.querySelector('.pregunta-imagen').textContent = pregunta;
         for (let i = 0; i<4;i++) {
             seccionPreguntaTipoImagen.querySelector(`.respuesta${i}`).setAttribute('src',respuestas[i])
+            seccionPreguntaTipoImagen.querySelector(`.respuesta${i}`).setAttribute('id',respuestas[i])
         }
+
+        
     }
 })
  
@@ -137,15 +141,23 @@ function aleatorio() {
         }
         
     } else if (preguntaActual["tipo-pregunta"] == "imagen") {
+        let respuesta =""
+        let respuesta1 = seccionPreguntaTipoImagen.querySelector('.respuesta0')
+        let respuesta2 = seccionPreguntaTipoImagen.querySelector('.respuesta1')
+        let respuesta3 = seccionPreguntaTipoImagen.querySelector('.respuesta2')
+        let respuesta4 = seccionPreguntaTipoImagen.querySelector('.respuesta3')
+        
         acumuladorPreguntas.push(indiceAleatorio)
         seccionPreguntaTipoImagen.classList.toggle('remover')
-        const { pregunta, respuestas} = preguntaActual
+        const { pregunta, respuestas,respuestaCorrecta} = preguntaActual
         seccionPreguntaTipoImagen.querySelector('.pregunta-imagen').textContent = pregunta;
+        let respuetaRight = respuestaCorrecta
         for (let i = 0; i<4;i++) {
             seccionPreguntaTipoImagen.querySelector(`.respuesta${i}`).setAttribute('src',respuestas[i])
+            seccionPreguntaTipoImagen.querySelector(`.respuesta${i}`).setAttribute('id',respuestas[i])
         }
-    
-}
+        
+    }
 }
 
 btnComprobar1.addEventListener('click', ()=> {
@@ -154,6 +166,7 @@ btnComprobar1.addEventListener('click', ()=> {
     seccionPreguntaTipoImagen.classList.toggle('remover')
     seccionPreguntaOrden.classList.toggle('remover')
     aleatorio()
+    
 
     
 })
@@ -173,6 +186,7 @@ btnComprobar3.addEventListener('click', ()=> {
     seccionPreguntaTipoImagen.classList.toggle('remover')
     seccionPreguntaOrden.classList.toggle('remover')
     aleatorio()
+    
 })
 
 

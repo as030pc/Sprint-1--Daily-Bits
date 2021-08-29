@@ -634,7 +634,7 @@
 
 
 
-.comprobar-respuesta-seleccion, .comprobar-respuesta-orden, .comprobar-respuesta-imagen {
+.comprobar-respuesta, .comprobar-respuesta-seleccion, .comprobar-respuesta-orden, .comprobar-respuesta-imagen {
     display: flex;
     flex-direction: column;
     align-items: flex-start;

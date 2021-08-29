@@ -4,14 +4,14 @@ export const preguntasHTML = [
     "tipo-pregunta": "select",
     "pregunta": "¿Qué etiqueta es semánticamente correcta para el contenido principal?",
     "respuestas": ["main", "section", "header"],
-    "respuesta-correcta": "main"
+    "respuestaCorrecta": "main"
   },
   {
     "id":2,
     "tipo-pregunta": "select",
     "pregunta": "¿Qué etiqueta HTML nos sirve para incluir archivos de JavaScript?",
     "respuestas": ["<br>", "<script>", "<styles>"],
-    "respuesta-correcta": "<script>"
+    "respuestaCorrecta": "<script>"
 
   },
   {
@@ -19,7 +19,7 @@ export const preguntasHTML = [
     "tipo-pregunta": "orden",
     "pregunta":"Organiza la estructura de un documento HTML5",
     "respuestas": ["./images/icono-doctype.png", "./images/icono-body.png", "./images/icono-head.png", "./images/icono-doctype.png", "./images/icono-html-a.png","./images/icono-html-c.png" ],
-    "respuesta-correcta": "a"
+    "respuestaCorrecta": ["./images/icono-doctype.png", "./images/icono-body.png", "./images/icono-head.png", "./images/icono-doctype.png", "./images/icono-html-a.png","./images/icono-html-c.png"]
   },
   {
     "id":4,
@@ -27,21 +27,21 @@ export const preguntasHTML = [
     "tipo-pregunta": "orden",
     "pregunta":"Organiza la estructura de un documento HTML5",
     "respuestas": ["./images/icono-doctype.png", "./images/icono-body.png", "./images/icono-head.png", "./images/icono-doctype.png", "./images/icono-html-a.png","./images/icono-html-c.png" ],
-    "respuesta-correcta": "a"
+    "respuestaCorrecta": ["./images/icono-doctype.png", "./images/icono-body.png", "./images/icono-head.png", "./images/icono-doctype.png", "./images/icono-html-a.png","./images/icono-html-c.png"]
   },
   {
     "id":5,
     "tipo-pregunta": "imagen",
     "pregunta": "¿Qué tecnologías pertenece al MEVN Stack?",
     "respuestas": ["./images/logo-windows.png", "./images/vuelogo.png", "./images/opcion4.png", "./images/logo-angular.png"],
-    "respuesta-correcta": "a"
+    "respuestaCorrecta": "./images/logo-windows.png"
   },
   {
     "id":6,
     "tipo-pregunta": "imagen",
     "pregunta": "¿Qué tecnologías pertenece al MEVN Stack?",
-    "respuestas": ["./images/logo-windows.png", "./images/vuelogo.png", "./images/icono-head.png", "./images/opcion4.png", "./images/logo-angular.png"],
-    "respuesta-correcta": "a"
+    "respuestas": ["./images/logo-windows.png", "./images/vuelogo.png", "./images/opcion4.png", "./images/logo-angular.png"],
+    "respuestaCorrecta": "./images/logo-windows.png"
   }
 ]
 
