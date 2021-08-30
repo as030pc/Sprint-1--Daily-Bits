@@ -90,7 +90,7 @@ btnPreguntasHTML.addEventListener('click', ()=>{
         const { pregunta, respuestas} = preguntaActual
         seccionPreguntaTipoSelect.querySelector('.pregunta-seleccion').textContent = pregunta;
         for (let i = 0; i<3;i++) {
-            seccionPreguntaTipoSelect.querySelector(`.option${i+1}`).setAttribute('value',respuestas[i])
+            seccionPreguntaTipoSelect.querySelector(`.respuesta${i+1}-select`).setAttribute('id',respuestas[i])
             seccionPreguntaTipoSelect.querySelector(`.respuesta${i+1}-select`).textContent = respuestas[i];
         } 
         
@@ -128,7 +128,7 @@ function aleatorio() {
         const { pregunta, respuestas} = preguntaActual
         seccionPreguntaTipoSelect.querySelector('.pregunta-seleccion').textContent = pregunta;
         for (let i = 0; i<3;i++) {
-            seccionPreguntaTipoSelect.querySelector(`.option${i+1}`).setAttribute('value',respuestas[i])
+            seccionPreguntaTipoSelect.querySelector(`.respuesta${i+1}-select`).setAttribute('id', respuestas[i])
             seccionPreguntaTipoSelect.querySelector(`.respuesta${i+1}-select`).textContent = respuestas[i];
         } 
         
