@@ -17,6 +17,12 @@
       "contrasenia": "030181as",
       "correo": "palma@gmail.com",
       "id": 2
+    },
+    {
+      "nombre": "Andres",
+      "contrasenia": "5485941",
+      "correo": "andres.palma@udea.edu.co",
+      "id": 3
     }
   ]
 }

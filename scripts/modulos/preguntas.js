@@ -135,9 +135,9 @@ export const preguntasJS = [
   {
     "id":6,
     "tipo-pregunta": "imagen",
-    "pregunta": "¿Qué tecnologías pertenece al MEVN Stack?",
-    "respuestas": ["./images/logo-windows.png", "./images/vuelogo.png", "./images/icono-head.png", "./images/opcion4", "./images/logo-angular"],
-    "respuesta-correcta": "a"
+    "pregunta": "¿Que funcion permite convertir un numero a entero?",
+    "respuestas": ["./images/js1.PNG", "./images/js2.PNG", "./images/js3.PNG", "./images/js.PNG"],
+    "respuesta-correcta": "./images/js1.PNG"
   }
 ]
 
