@@ -13,9 +13,9 @@ let respuestasMalas = 0
 import {preguntasHTML} from "./modulos/preguntas.js"
 
 
-function comprobarPreguntaImagen(indicePregunta) {
+function comprobarPreguntaImagen(tipoPregunta ) {
     let preguntasContestadas = 0
-    const preguntaActual = preguntasHTML[indicePregunta]
+    let preguntaActual = preguntasHTML[tipoPregunta]
     let respuetaCorrecta = preguntaActual["respuestaCorrecta"]
 
     let respuesta =""
@@ -66,7 +66,7 @@ comprobarPreguntaImagen(4)
 
 function comprobarPreguntaSelect(indicePregunta) {
     let preguntasContestadas = 0
-    const preguntaActual = preguntasHTML[indicePregunta]
+    let preguntaActual = preguntasHTML[indicePregunta]
     let respuetaCorrecta = preguntaActual["respuestaCorrecta"]
     let respuesta =""
     let respuesta1 = seccionPreguntaTipoSelect .querySelector('.respuesta1-select')

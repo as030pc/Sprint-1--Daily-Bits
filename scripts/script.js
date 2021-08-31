@@ -68,21 +68,15 @@ btnHome.addEventListener('click', ()=>{
 
 
 
-//Preguntas HTML
 
-let btnPreguntasHTML = document.querySelector('.opcion-html')
-import {preguntasHTML} from "./modulos/preguntas.js"
-console.log(preguntasHTML)
-console.log(preguntasHTML.length)
+
+//Funciones de generacion
 let indiceAleatorio = 0
 let acumuladorPreguntas = []
 
-        //comprobacion de preguntas
-        
-
-btnPreguntasHTML.addEventListener('click', ()=>{
-    indiceAleatorio = Math.floor(Math.random()*(preguntasHTML.length))
-    const preguntaActual = preguntasHTML[indiceAleatorio]
+function inicioPregunta (tipoLenguaje) {
+    indiceAleatorio = Math.floor(Math.random()*(tipoLenguaje.length))
+    const preguntaActual = tipoLenguaje[indiceAleatorio]
     if (preguntaActual["tipo-pregunta"] == "select" ) {
         acumuladorPreguntas.push(indiceAleatorio)
         seccionMenuPractica.classList.toggle('remover')
@@ -115,12 +109,15 @@ btnPreguntasHTML.addEventListener('click', ()=>{
 
         
     }
-})
+
+}
+
+
  
-function aleatorio() {
-    indiceAleatorio = Math.floor(Math.random()*(preguntasHTML.length))
+function aleatorio(tipoLenguaje) {
+    indiceAleatorio = Math.floor(Math.random()*(tipoLenguaje.length))
     console.log(indiceAleatorio)
-    const preguntaActual = preguntasHTML[indiceAleatorio]
+    const preguntaActual = tipoLenguaje[indiceAleatorio]
 
     if (preguntaActual["tipo-pregunta"] == "select") {
         acumuladorPreguntas.push(indiceAleatorio)
@@ -141,12 +138,6 @@ function aleatorio() {
         }
         
     } else if (preguntaActual["tipo-pregunta"] == "imagen") {
-        let respuesta =""
-        let respuesta1 = seccionPreguntaTipoImagen.querySelector('.respuesta0')
-        let respuesta2 = seccionPreguntaTipoImagen.querySelector('.respuesta1')
-        let respuesta3 = seccionPreguntaTipoImagen.querySelector('.respuesta2')
-        let respuesta4 = seccionPreguntaTipoImagen.querySelector('.respuesta3')
-        
         acumuladorPreguntas.push(indiceAleatorio)
         seccionPreguntaTipoImagen.classList.toggle('remover')
         const { pregunta, respuestas,respuestaCorrecta} = preguntaActual
@@ -160,44 +151,108 @@ function aleatorio() {
     }
 }
 
-btnComprobar1.addEventListener('click', ()=> {
-    //Pregunta tipo select
-    seccionPreguntaTipoSelect.classList.toggle('remover')
-    seccionPreguntaTipoImagen.classList.toggle('remover')
-    seccionPreguntaOrden.classList.toggle('remover')
-    aleatorio()
-    
 
+
+let btnPreguntasHTML = document.querySelector('.opcion-html')
+import {preguntasHTML} from "./modulos/preguntas.js"
+console.log(preguntasHTML)
+console.log(preguntasHTML.length)
+
+btnPreguntasHTML.addEventListener('click', ()=>{
+    inicioPregunta(preguntasHTML)
+
+    btnComprobar1.addEventListener('click', ()=> {
+        //Pregunta tipo select
+        seccionPreguntaTipoSelect.classList.toggle('remover')
+        seccionPreguntaTipoImagen.classList.toggle('remover')
+        seccionPreguntaOrden.classList.toggle('remover')
+        aleatorio(preguntasHTML) 
+    })
     
+    btnComprobar2.addEventListener('click', ()=> {
+        //Pregunta tipo orden
+        seccionPreguntaTipoSelect.classList.toggle('remover')
+        seccionPreguntaTipoImagen.classList.toggle('remover')
+        seccionPreguntaOrden.classList.toggle('remover')
+        aleatorio(preguntasHTML)
+    })
+    
+    btnComprobar3.addEventListener('click', ()=> {
+        //Pregunta tipo Imagen
+        seccionPreguntaTipoSelect.classList.toggle('remover')
+        seccionPreguntaTipoImagen.classList.toggle('remover')
+        seccionPreguntaOrden.classList.toggle('remover')
+        aleatorio(preguntasHTML)
+        
+    })
 })
 
-btnComprobar2.addEventListener('click', ()=> {
-    //Pregunta tipo orden
-    seccionPreguntaTipoSelect.classList.toggle('remover')
-    seccionPreguntaTipoImagen.classList.toggle('remover')
-    seccionPreguntaOrden.classList.toggle('remover')
-    aleatorio()
+
+
+//Preguntas CSS
+let btnPreguntasCSS = document.querySelector('.opcion-css')
+import {preguntasCSS} from "./modulos/preguntas.js"
+btnPreguntasCSS.addEventListener('click', ()=>{
+    inicioPregunta(preguntasCSS)
+
+    btnComprobar1.addEventListener('click', ()=> {
+        //Pregunta tipo select
+        seccionPreguntaTipoSelect.classList.toggle('remover')
+        seccionPreguntaTipoImagen.classList.toggle('remover')
+        seccionPreguntaOrden.classList.toggle('remover')
+        aleatorio(preguntasCSS) 
+    })
     
+    btnComprobar2.addEventListener('click', ()=> {
+        //Pregunta tipo orden
+        seccionPreguntaTipoSelect.classList.toggle('remover')
+        seccionPreguntaTipoImagen.classList.toggle('remover')
+        seccionPreguntaOrden.classList.toggle('remover')
+        aleatorio(preguntasCSS)
+    })
+    
+    btnComprobar3.addEventListener('click', ()=> {
+        //Pregunta tipo Imagen
+        seccionPreguntaTipoSelect.classList.toggle('remover')
+        seccionPreguntaTipoImagen.classList.toggle('remover')
+        seccionPreguntaOrden.classList.toggle('remover')
+        aleatorio(preguntasCSS)
+        
+    })
 })
 
-btnComprobar3.addEventListener('click', ()=> {
-    //Pregunta tipo Imagen
-    seccionPreguntaTipoSelect.classList.toggle('remover')
-    seccionPreguntaTipoImagen.classList.toggle('remover')
-    seccionPreguntaOrden.classList.toggle('remover')
-    aleatorio()
+
+//Preguntas JS
+let btnPreguntasJS = document.querySelector('.opcion-js')
+import {preguntasJS} from "./modulos/preguntas.js"
+btnPreguntasJS.addEventListener('click', ()=>{
+    inicioPregunta(preguntasJS)
+
+    btnComprobar1.addEventListener('click', ()=> {
+        //Pregunta tipo select
+        seccionPreguntaTipoSelect.classList.toggle('remover')
+        seccionPreguntaTipoImagen.classList.toggle('remover')
+        seccionPreguntaOrden.classList.toggle('remover')
+        aleatorio(preguntasJS) 
+    })
     
+    btnComprobar2.addEventListener('click', ()=> {
+        //Pregunta tipo orden
+        seccionPreguntaTipoSelect.classList.toggle('remover')
+        seccionPreguntaTipoImagen.classList.toggle('remover')
+        seccionPreguntaOrden.classList.toggle('remover')
+        aleatorio(preguntasJS)
+    })
+    
+    btnComprobar3.addEventListener('click', ()=> {
+        //Pregunta tipo Imagen
+        seccionPreguntaTipoSelect.classList.toggle('remover')
+        seccionPreguntaTipoImagen.classList.toggle('remover')
+        seccionPreguntaOrden.classList.toggle('remover')
+        aleatorio(preguntasJS)
+        
+    })
 })
-
-
-
-console.log(acumuladorPreguntas)
-
-
-
-
-
-
 
 
 
